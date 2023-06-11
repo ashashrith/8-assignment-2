@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-container {
+  background-color: #9ba9eb;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  overflow: auto;
+}
+
+.app-logo {
+  height: 60px;
+  width: 120px;
+  background-size: cover;
+}
+
+.input-cont {
+  height: auto;
+  width: 110vh;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #5763a5;
+  margin-top: 12px;
+  border-radius: 12px;
+}
+
+.form-cont {
+  height: auto;
+  width: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #4756a8;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.pass-heading {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 25px;
+  background-color: white;
+  border-right-color: #94a3b8;
+  border-width: 1px;
+}
+
+.img {
+  height: 14px;
+  width: 14px;
+  background-size: cover;
+}
+
+.input {
+  height: 27px;
+  width: 180px;
+  outline: none;
+}
+
+.mini {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.submit-btn {
+  background-color: #0b69ff;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-width: 0px;
+  border-radius: 7px;
+  height: 25px;
+  width: 54px;
+  margin: 12px;
+}
+
+.image {
+  height: 50vh;
+  width: 50vh;
+  background-size: cover;
+  margin: 10px;
+}
+
+.password-cont {
+  height: 60vh;
+  flex-shrink: 0;
+  width: 110vh;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background-color: #5763a5;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.search-cont {
+  height: auto;
+  width: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.pass-count-cont {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.your {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.count-cont {
+  height: 18px;
+  width: 22px;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: #94a3b8;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+  border-radius: 12px;
+}
+
+.count {
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+.line {
+  border-width: 1px;
+  border-color: #9ba9eb;
+  width: 100vh;
+}
+
+.show-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vh;
+}
+
+.select {
+  height: 15px;
+  margin-right: 8px;
+  width: 15px;
+  outline: none;
+}
+
+.p {
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.pass-img {
+  height: 35vh;
+  width: 44vh;
+  background-size: cover;
+}
+
+.list-cont {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: flex-start;
+}
