@@ -196,10 +196,9 @@ body {
 }
 
 .p {
-  font-size: 13px;
+  font-size: 16px;
   color: white;
   font-weight: 600;
-  margin-right: 15px;
 }
 
 .pass-img {
@@ -213,4 +212,11 @@ body {
   flex-direction: row;
   padding: 10px;
   justify-content: flex-start;
+}
+
+.div-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

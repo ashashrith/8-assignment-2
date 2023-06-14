@@ -4,7 +4,7 @@ const WebsiteItem = props => {
   const {item, deleteItem, checkBox} = props
   const {username, website, password, id} = item
 
-  const word = username[0]
+  const word = username[0].toUpperCase()
 
   const onClickDelete = () => {
     deleteItem(id)

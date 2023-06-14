@@ -34,15 +34,9 @@ class App extends Component {
     this.setState({search: event.target.value})
   }
 
-  ulList = event => {
-    if (event.target.value.length === 0) {
-      this.setState({isTrue: true})
-    }
-  }
-
   onSubmitItem = event => {
-    const {username, password, website, count} = this.state
     event.preventDefault()
+    const {username, password, website, count} = this.state
 
     const details = {
       id: uuidv4(),
@@ -50,14 +44,13 @@ class App extends Component {
       username,
       website,
     }
-
     if (username !== '' && password !== '' && website !== '') {
       this.setState(prevState => ({count: prevState.count + 1}))
 
-      if (count === 0) {
-        this.setState({isTrue: true})
-      } else {
+      if (count >= 0) {
         this.setState({isTrue: false})
+      } else if (count <= 0) {
+        this.setState({isTrue: true})
       }
 
       this.setState(prevState => ({
@@ -94,7 +87,7 @@ class App extends Component {
       count,
     } = this.state
 
-    const finalList = listDetails.map(each =>
+    const finalList = listDetails.filter(each =>
       each.website.toLowerCase().includes(search.toLowerCase()),
     )
 
@@ -205,24 +198,27 @@ class App extends Component {
               Show Passwords
             </label>
           </div>
-          {isTrue && (
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-              alt="no passwords"
-              className="pass-img"
-            />
-          )}
-          {isTrue && <p className="your">No Passwords</p>}
-          <ul className="list-cont">
-            {finalList.map(each => (
-              <WebsiteItem
-                item={each}
-                key={each.id}
-                deleteItem={this.deleteItem}
-                checkBox={checkBox}
+          {isTrue ? (
+            <div className="div-cont">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+                alt="no passwords"
+                className="pass-img"
               />
-            ))}
-          </ul>
+              <p className="p">No passwords</p>
+            </div>
+          ) : (
+            <ul className="list-cont">
+              {finalList.map(each => (
+                <WebsiteItem
+                  item={each}
+                  key={each.id}
+                  deleteItem={this.deleteItem}
+                  checkBox={checkBox}
+                />
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     )
